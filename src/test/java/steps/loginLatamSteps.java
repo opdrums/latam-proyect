@@ -30,18 +30,33 @@ public class loginLatamSteps {
         loginPo.clickButtonLabelLogin(name);
     }
 
-    public void sendKeyEmailAndPssword(String email, String password){
+    @Step
+    public void sendKeyEmail(String email){
         loginPo.sendKeyEmailLogin(email);
         loginPo.clickButtonContinue();
-        loginPo.sendKeyPasswordLogin(password);
-        loginPo.clickButtonLogin();
+        if(loginPo.isVisibleLabelUserNotFound()){
+            Reporte.reports("FAIL", "usuario no encontrado", Reporte.takeSnapShot(DriverFactory.getDriver()));
+            Assert.fail("Usuario no encontrado");
+        }
+        Reporte.reports("INFO", "ingreso de email correcto", Reporte.takeSnapShot(DriverFactory.getDriver()));
     }
 
-    public void isVisibleLogo(){
-        if(loginPo.isVisibleLabelLatam()){
-            Reporte.reports("PASS", "inicio de session exitoso", Reporte.takeSnapShot(DriverFactory.getDriver()));
+    @Step
+    public  void sendKeyPassword(String password){
+        loginPo.sendKeyPasswordLogin(password);
+        loginPo.clickButtonLogin();
+        if(loginPo.isVisibleLabelPasswordIncorrect()){
+            Reporte.reports("FAIL", "contraseña incorrecta", Reporte.takeSnapShot(DriverFactory.getDriver()));
+            Assert.fail("contraseña incorrecta");
         }
-        Reporte.reports("FAIL", "inicio de session no exitosa", Reporte.takeSnapShot(DriverFactory.getDriver()));
+        Reporte.reports("PASS", "ingreso de contraseña exitoso", Reporte.takeSnapShot(DriverFactory.getDriver()));
+    }
 
+    @Step
+    public void isVisibleLogo(){
+        if(!loginPo.isVisibleLabelLatam()){
+            Reporte.reports("FAIL", "inicio de session no exitosa", Reporte.takeSnapShot(DriverFactory.getDriver()));
+        }
+        Reporte.reports("PASS", "inicio de session exitoso", Reporte.takeSnapShot(DriverFactory.getDriver()));
     }
 }

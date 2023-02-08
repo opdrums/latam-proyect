@@ -1,1 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="Yo como automatizador, requiero realizar login en la web" skipped="0" tests="1" time="41.36" timestamp="2023-02-07 07:08:13"><testcase name="login latam"/></testsuite>
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="1" failures="0" name="Yo como automatizador, requiero realizar login en la web" skipped="0" tests="1" time="114.89" timestamp="2023-02-08 01:44:36"><testcase name="login latam"><error message="No se encuentra el elemento &#10;Elemento: Proxy element for: loginPo.userPassword: " type="org.awaitility.core.ConditionTimeoutException">No se encuentra el elemento 
+Elemento: Proxy element for: loginPo.userPassword: </error><system-err>No se encuentra el elemento 
+Elemento: Proxy element for: loginPo.userPassword: 
+pageObjects.WebBasePage.waitUntilElementIsVisible(WebBasePage.java:48)
+pageObjects.loginPo.sendKeyPasswordLogin(loginPo.java:42)
+steps.loginLatamSteps.sendKeyPassword(loginLatamSteps.java:46)
+definitions.loginLatamDefinitions.credentialUser(loginLatamDefinitions.java:33)
+✽.las credenciales test@gmail.com y latam2022(src/test/resources/features/login.feature:7)
+</system-err></testcase></testsuite>

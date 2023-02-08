@@ -154,7 +154,7 @@
             <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 07-02-2023 19:08</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 08-02-2023 13:44</span>
     <br style="clear:left"/>
 </div>
 
@@ -207,9 +207,9 @@
                 <table class="outcome-header">
                     <tr>
                         <td colspan="2" class="test-title-bar">
-                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-exclamation-triangle error-icon fa-2x' title='ERROR'></i></a></span>
                             <span class="test-case-title">
-                                <span class="success-color">login latam
+                                <span class="error-color">login latam
                                     <span class="related-issue-title"></span>
                                 </span>
                             </span>
@@ -225,15 +225,54 @@
 
     <div class="story-title">
         <h3>Scenario:</h3>
-        <div class="scenario">Given ingreso a latam &lt;Ambiente&gt;<br>When doy click en label Iniciar sesión<br>And las credenciales &lt;user&gt; y &lt;password&gt;</div>
+        <div class="scenario">Given ingreso a latam &lt;Ambiente&gt;<br>When doy click en label Iniciar sesión<br>And las credenciales &lt;user&gt; y &lt;password&gt;<br>Then visualizar el logo de latam</div>
     </div>
 
     <div id="beforetable"></div>
     <div id="contenttilttle">
+            <div class="screenshotFailure panel panel-danger">
+
+    <div style="display:block">
+        <div class="table">
+            <div class="row">
+                <div class="col-sm-10" style="padding-left:1.5em; padding-top:0.5em; padding-bottom:0.5em;">
+                    <span class="error-message error-message-title">Condition timeout exception: No se encuentra el elemento </span>
+                </div>
+                <div class="col-sm-2">
+                    <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-overall""
+                       role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><i class="far fa-eye"></i> More details</a>
+                </div>
+             </div>
+        </div>
+    <div>
+
+    <!-- Details Section -->
+    <div class="row stacktrace-details">
+      <div class="col">
+        <div class="collapse multi-collapse" id="stacktraceModal-overall">
+            <div class="card">
+                <div class="card-header">
+                    <h4>org.awaitility.core.ConditionTimeoutException </h4>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <pre>pageObjects.WebBasePage.waitUntilElementIsVisible(WebBasePage.java:48)<br />pageObjects.loginPo.sendKeyPasswordLogin(loginPo.java:42)<br />steps.loginLatamSteps.sendKeyPassword(loginLatamSteps.java:46)<br />definitions.loginLatamDefinitions.credentialUser(loginLatamDefinitions.java:33)<br />✽.las credenciales test@gmail.com y latam2022(src/test/resources/features/login.feature:7)<br /></pre>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+                <div class="panel-body">
+                    <a href="pagesource5266342963968502991.html.txt" target="_blank" class="btn btn-info">HTML Source</a>
+                </div>
+            </div>
         <div class="slider-wrapper theme-default">
             <div id="slider">
-                <img src="6961feb5d694f2fbbb16c8b0cae80f8a2692164d5ea229916b335d6b69b01477.png" title=" Example: {Ambiente=CO, user=operez6921@gmail.com, password=123456}" width="2005"/>
-                <img src="6961feb5d694f2fbbb16c8b0cae80f8a2692164d5ea229916b335d6b69b01477.png" title=" And las credenciales operez6921@gmail.com y 123456: <span class='success-color'>SUCCESS</span>" width="2005"/>
+                <img src="d4014bc63d37831a0fd586d84bceea23741477e8c6479b0520bb97be41df1ff2.png" title=" Example: {Ambiente=CO, user=test@gmail.com, password=latam2022}" width="1200"/>
+                <img src="d4014bc63d37831a0fd586d84bceea23741477e8c6479b0520bb97be41df1ff2.png" title=" And las credenciales test@gmail.com y latam2022: <span class='error-color'>ERROR</span>" width="1200"/>
             </div>
         </div>
 

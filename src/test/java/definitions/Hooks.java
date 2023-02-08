@@ -21,7 +21,7 @@ public class Hooks {
         String controlador = Utils.readProperty("configurations", "Ruta_Driver");
         String navegador = Utils.readProperty("configurations", "navegador");
         driver = DriverFactory.getDriverManager(navegador.toUpperCase(), controlador);
-        driver.manage().window().maximize();
+        //driver.manage().window().maximize();
         this.scenario = scenario;
         Reporte.startReport(scenario.getName());
     }

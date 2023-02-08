@@ -144,8 +144,4 @@ public class WebBasePage extends PageObject {
         }
         return nombre;
     }
-
-    public void time() throws InterruptedException {
-        Thread.sleep(20000);
-    }
 }

@@ -29,7 +29,8 @@ public class loginLatamDefinitions {
 
     @And("^las credenciales (.*) y (.*)$")
     public void credentialUser(String user, String password) {
-        loginLatamSteps.sendKeyEmailAndPssword(user.trim(), password.trim());
+        loginLatamSteps.sendKeyEmail(user);
+        loginLatamSteps.sendKeyPassword(password);
     }
 
     @Then("visualizar el logo de latam")

@@ -8,4 +8,4 @@ Feature: Yo como automatizador, requiero realizar login en la web
     Then visualizar el logo de latam
     Examples:
       | Ambiente |user| password|
-      |CO|test@gmail.com |123456 |
+      |CO|tes1111t@gmail.com |latam2022 |

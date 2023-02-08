@@ -5,7 +5,7 @@ Feature: Yo como automatizador, requiero realizar login en la web
     Given ingreso a latam <Ambiente>
     When doy click en label Iniciar sesión
     And las credenciales <user> y <password>
-
+    Then visualizar el logo de latam
     Examples:
       | Ambiente |user| password|
-      |CO|operez6921@gmail.com |123456 |
+      |CO|tes1111t@gmail.com |latam2022 |

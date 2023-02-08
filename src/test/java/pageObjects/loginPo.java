@@ -9,7 +9,7 @@ public class loginPo extends WebBasePage{
     @FindBy (id = "form-input--alias")
     private WebElement userEmail;
 
-    @FindBy (id = "form-input--alias")
+    @FindBy (id = "form-input--password")
     private WebElement userPassword;
 
     @FindBy(id = "primary-button")
@@ -18,8 +18,14 @@ public class loginPo extends WebBasePage{
     @FindBy(xpath = "//span[text() ='Iniciar sesión']")
     private WebElement buttonLoginUser;
 
-    @FindBy (xpath = "//span[text() ='Latam Airlines']")
+    @FindBy (xpath = "//span[contains(text(),'Latam Airlines')]")
     private WebElement labelLatamAirlines;
+
+    @FindBy (xpath = "//div[contains(text(),'No encontramos tu usuario')]")
+    private WebElement labelUserNotFound;
+
+    @FindBy (xpath = "//span[text() ='Contraseña incorrecta']")
+    private WebElement labelPasswordIncorrect;
 
     public void clickButtonLabelLogin( String name){
         WebElement element = getElement(xpathLabelLogin, name);
@@ -48,6 +54,17 @@ public class loginPo extends WebBasePage{
     }
 
     public boolean isVisibleLabelLatam(){
+        waitUntilElementIsVisibleNonThrow(labelLatamAirlines, 10);
         return isVisible(labelLatamAirlines);
+    }
+
+    public boolean isVisibleLabelUserNotFound(){
+        waitUntilElementIsVisibleNonThrow(labelUserNotFound, 10);
+        return isVisible(labelUserNotFound);
+    }
+
+    public boolean isVisibleLabelPasswordIncorrect(){
+        waitUntilElementIsVisibleNonThrow(labelPasswordIncorrect, 10);
+        return isVisible(labelPasswordIncorrect);
     }
 }
