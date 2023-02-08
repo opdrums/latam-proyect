@@ -148,7 +148,7 @@
             <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 06-02-2023 17:21</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 08-02-2023 13:44</span>
     <br style="clear:left"/>
 </div>
     <div class="clr"></div>
@@ -199,9 +199,9 @@
                 <table class="outcome-header">
                     <tr>
                         <td colspan="2" class="test-title-bar">
-                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-exclamation-triangle error-icon fa-2x' title='ERROR'></i></a></span>
                             <span class="test-case-title">
-                                <span class="success-color">
+                                <span class="error-color">
                                     login latam
                                         <span class="related-issue-title"></span>
                                 </span>
@@ -222,7 +222,7 @@
         <div class="story-title">
             <h3 class="story-header">Scenario Outline</h3>
 
-            <div class="scenario">Given ingreso a latam &lt;Ambiente&gt;</div>
+            <div class="scenario">Given ingreso a latam &lt;Ambiente&gt;<br>When doy click en label Iniciar sesión<br>And las credenciales &lt;user&gt; y &lt;password&gt;<br>Then visualizar el logo de latam</div>
 
         </div>
 
@@ -241,13 +241,21 @@
                     <tr>
                         <th>#</th>
                             <th>Ambiente</th>
+                            <th>User</th>
+                            <th>Password</th>
                     </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td class="test-SUCCESS"><a href="#0">1</a></td>
-                                <td class="test-SUCCESS"><a
+                            <td class="test-ERROR"><a href="#0">1</a></td>
+                                <td class="test-ERROR"><a
                                             href="#0">CO</a>
+                                </td>
+                                <td class="test-ERROR"><a
+                                            href="#0">test@gmail.com</a>
+                                </td>
+                                <td class="test-ERROR"><a
+                                            href="#0">latam2022</a>
                                 </td>
                         </tr>
                     </tbody>
@@ -264,6 +272,7 @@
                         Steps
                     </th>
 
+                        <th width="150" class="greentext">Screenshots</th>
                     <th width="130" class="greentext">Outcome</th>
                     <th width="100" class="greentext"><i title="Duration" class="far fa-clock"></i></th>
                 </tr>
@@ -271,13 +280,13 @@
                     <td colspan="5"></td>
                 </tr>
 
-                    <tr class="test-SUCCESS">
+                    <tr class="test-ERROR">
 
                         <td width="50" class="step-icon">
                             <a name="0"></a>
                                 <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0')"
                                    style="display:block">
-                                    <i class="fa fa-plus-square-o imgstepSection0 success-icon"
+                                    <i class="fa fa-plus-square-o imgstepSection0 error-icon"
                                        style="margin-left: 20px; float:left; padding-right:5px"></i>
                                 </a>
                         </td>
@@ -287,7 +296,7 @@
                                 <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0')"
                                    style="display:block;">
                                     <span class="top-level-step">
-                                                Example: {Ambiente=CO}
+                                                Example: {Ambiente=CO, user=test@gmail.com, password=latam2022}
                                         </span>
                                 </a>
                                 <span class="evidence">
@@ -295,8 +304,17 @@
                             </div>
                         </td>
 
-                        <td width="130"><span class="top-level-step">SUCCESS</span></td>
-                        <td width="100"><span class="top-level-step">19.45s</span></td>
+                            <td width="160" class="ERROR-text">
+
+                                    <a href="25327f5757a3f90ab8646504d8b35d4b840c1e479fb319edb808747d12cef69b_screenshots.html#screenshots?screenshot=1">
+                                        <img src="d4014bc63d37831a0fd586d84bceea23741477e8c6479b0520bb97be41df1ff2.png"
+                                             href="d4014bc63d37831a0fd586d84bceea23741477e8c6479b0520bb97be41df1ff2.png"
+                                             class="screenshot"
+                                             width="48" height="48"/>
+                                    </a>
+                            </td>
+                        <td width="130"><span class="top-level-step">ERROR</span></td>
+                        <td width="100"><span class="top-level-step">114.59s</span></td>
                     </tr>
                         <tr>
                             <td colspan="5">
@@ -321,17 +339,139 @@
                             </div>
                         </td>
 
+                            <td width="160" class="SUCCESS-text">
+
+                            </td>
                         <td width="130"><span class="nested-group-step">SUCCESS</span></td>
-                        <td width="100"><span class="nested-group-step">10.53s</span></td>
+                        <td width="100"><span class="nested-group-step">10.23s</span></td>
+                    </tr>
+                    <tr class="test-SUCCESS">
+
+                        <td width="70" class="step-icon">
+                            <a name="0-1"></a>
+                                <span style="margin-left: 40px;"
+                                      class="nested-group-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a>
+                                </span>
+                        </td>
+
+                        <td class="step-description-column">
+                            <div class="step-description">
+                                    <span class="nested-group-step">
+                                                When doy click en label Iniciar sesión
+                                        </span>
+                                <span class="evidence">
+                                </span>
+                            </div>
+                        </td>
+
+                            <td width="160" class="SUCCESS-text">
+
+                            </td>
+                        <td width="130"><span class="nested-group-step">SUCCESS</span></td>
+                        <td width="100"><span class="nested-group-step">3.11s</span></td>
+                    </tr>
+                    <tr class="test-ERROR">
+
+                        <td width="70" class="step-icon">
+                            <a name="0-2"></a>
+                                <span style="margin-left: 40px;"
+                                      class="nested-group-icon"><a href='##beforetable'><i class='fa fa-exclamation-triangle error-icon ' title='ERROR'></i></a>
+                                </span>
+                        </td>
+
+                        <td class="step-description-column">
+                            <div class="step-description">
+                                    <span class="nested-group-step">
+                                                And las credenciales test@gmail.com y latam2022
+                                        </span>
+                                <span class="evidence">
+                                </span>
+                            </div>
+                        </td>
+
+                            <td width="160" class="ERROR-text">
+
+                                    <a href="25327f5757a3f90ab8646504d8b35d4b840c1e479fb319edb808747d12cef69b_screenshots.html#screenshots?screenshot=1">
+                                        <img src="d4014bc63d37831a0fd586d84bceea23741477e8c6479b0520bb97be41df1ff2.png"
+                                             href="d4014bc63d37831a0fd586d84bceea23741477e8c6479b0520bb97be41df1ff2.png"
+                                             class="screenshot"
+                                             width="48" height="48"/>
+                                    </a>
+                            </td>
+                        <td width="130"><span class="nested-group-step">ERROR</span></td>
+                        <td width="100"><span class="nested-group-step">94.18s</span></td>
+                    </tr>
+                        <tr class="test-ERROR">
+                            <td width="40">&nbsp</td>
+                            <td width="%" colspan="4" class="error-message-cell">
+
+
+    <div style="display:block">
+        <div class="table">
+            <div class="row">
+                <div class="col-sm-10" style="padding-left:1.5em; padding-top:0.5em; padding-bottom:0.5em;">
+                    <span class="error-message error-message-title">org.awaitility.core.ConditionTimeoutException: No se encuentra el elemento <br>Elemento: Proxy element for: loginPo.userPassword: </span>
+                </div>
+                <div class="col-sm-2">
+                    <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-4""
+                       role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><i class="far fa-eye"></i> More details</a>
+                </div>
+             </div>
+        </div>
+    <div>
+
+    <!-- Details Section -->
+    <div class="row stacktrace-details">
+      <div class="col">
+        <div class="collapse multi-collapse" id="stacktraceModal-4">
+            <div class="card">
+                <div class="card-header">
+                    <h4>org.awaitility.core.ConditionTimeoutException </h4>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <pre>pageObjects.WebBasePage.waitUntilElementIsVisible(WebBasePage.java:48)<br />pageObjects.loginPo.sendKeyPasswordLogin(loginPo.java:42)<br />steps.loginLatamSteps.sendKeyPassword(loginLatamSteps.java:46)<br />definitions.loginLatamDefinitions.credentialUser(loginLatamDefinitions.java:33)<br />✽.las credenciales test@gmail.com y latam2022(src/test/resources/features/login.feature:7)<br /></pre>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+                            </td>
+                        </tr>
+                    <tr class="test-SKIPPED">
+
+                        <td width="70" class="step-icon">
+                            <a name="0-3"></a>
+                                <span style="margin-left: 40px;"
+                                      class="nested-group-icon"><a href='##beforetable'><i class='fa fa-fast-forward skipped-icon ' title='SKIPPED'></i></a>
+                                </span>
+                        </td>
+
+                        <td class="step-description-column">
+                            <div class="step-description">
+                                    <span class="nested-group-step">
+                                                Then visualizar el logo de latam
+                                        </span>
+                                <span class="evidence">
+                                </span>
+                            </div>
+                        </td>
+
+                            <td width="160" class="SKIPPED-text">
+
+                            </td>
+                        <td width="130"><span class="nested-group-step">SKIPPED</span></td>
+                        <td width="100"><span class="nested-group-step">0s</span></td>
                     </tr>
 
                                 </table>
                             </td>
                         </tr>
-                <tr class="test-SUCCESS">
-                        <td colspan="2"></td>
-                    <td width="130"><span class="top-level-step"><em>SUCCESS</em></span></td>
-                    <td width="100"><span class="top-level-step"><em>19.54s</em></span></td>
+                <tr class="test-ERROR">
+                        <td colspan="3"></td>
+                    <td width="130"><span class="top-level-step"><em>ERROR</em></span></td>
+                    <td width="100"><span class="top-level-step"><em>114.89s</em></span></td>
                 </tr>
 
             </table>

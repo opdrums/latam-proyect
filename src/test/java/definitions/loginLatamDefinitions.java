@@ -1,4 +1,5 @@
 package definitions;
+import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -19,5 +20,21 @@ public class loginLatamDefinitions {
         loginLatamDefinitions.ambiente = ambiente.trim();
         loginLatamSteps.abrirNavegador(loginLatamDefinitions.ambiente.toUpperCase());
         loginLatamSteps.abrirNavegador(ambiente);
+    }
+
+    @When("^doy click en label (.*)$")
+    public void clickLabellogin(String name){
+        loginLatamSteps.clickButtonLoginUser(name);
+    }
+
+    @And("^las credenciales (.*) y (.*)$")
+    public void credentialUser(String user, String password) {
+        loginLatamSteps.sendKeyEmail(user);
+        loginLatamSteps.sendKeyPassword(password);
+    }
+
+    @Then("visualizar el logo de latam")
+    public void visiblelogo(){
+        loginLatamSteps.isVisibleLogo();
     }
 }

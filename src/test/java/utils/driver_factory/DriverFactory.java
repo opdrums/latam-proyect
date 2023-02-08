@@ -19,6 +19,7 @@ public class DriverFactory {
             options.addArguments("--disable-notifications");
             options.addArguments("--disable-features=EnableEphemeralFlashPermission");
             options.addArguments("--disable-infobars");
+            options.addArguments("--disable-blink-features=AutomationControlled");
             driver = new ChromeDriver(options);
         } else if (browser.equals("IE")) {
             System.setProperty("webdriver.ie.driver", controlador);
