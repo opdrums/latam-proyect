@@ -3,3 +3,4 @@ CASOS FALLIDOS EN LA REGRESIÓN AUTOMATIZADA:
 
 MODULO: Pibox --> ESCENARIO: login latam
 MODULO: Pibox --> ESCENARIO: login latam
+MODULO: Pibox --> ESCENARIO: login latam

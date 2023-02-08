@@ -24,4 +24,24 @@ public class loginLatamSteps {
         } catch (Exception e) {
         }
     }
+
+    @Step
+    public void clickButtonLoginUser(String name){
+        loginPo.clickButtonLabelLogin(name);
+    }
+
+    public void sendKeyEmailAndPssword(String email, String password){
+        loginPo.sendKeyEmailLogin(email);
+        loginPo.clickButtonContinue();
+        loginPo.sendKeyPasswordLogin(password);
+        loginPo.clickButtonLogin();
+    }
+
+    public void isVisibleLogo(){
+        if(loginPo.isVisibleLabelLatam()){
+            Reporte.reports("PASS", "inicio de session exitoso", Reporte.takeSnapShot(DriverFactory.getDriver()));
+        }
+        Reporte.reports("FAIL", "inicio de session no exitosa", Reporte.takeSnapShot(DriverFactory.getDriver()));
+
+    }
 }
