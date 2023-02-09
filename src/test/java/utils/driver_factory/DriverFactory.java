@@ -3,8 +3,6 @@ package utils.driver_factory;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.ie.InternetExplorerDriver;
 import utils.reporting.Reporte;
 
 import java.util.ArrayList;
@@ -21,12 +19,12 @@ public class DriverFactory {
             options.addArguments("--disable-infobars");
             options.addArguments("--disable-blink-features=AutomationControlled");
             driver = new ChromeDriver(options);
-        } else if (browser.equals("IE")) {
-            System.setProperty("webdriver.ie.driver", controlador);
-            driver = new InternetExplorerDriver();
-        }else if (browser.equals("MOZILLA")) {
-            System.setProperty("webdriver.gecko.driver", controlador);
-            driver = new FirefoxDriver();
+        //} //else if (browser.equals("IE")) {
+            //System.setProperty("webdriver.ie.driver", controlador);
+            //driver = new InternetExplorerDriver();
+        //}//else if (browser.equals("MOZILLA")) {
+           // System.setProperty("webdriver.gecko.driver", controlador);
+           // driver = new FirefoxDriver();
         }
 
         return driver;
