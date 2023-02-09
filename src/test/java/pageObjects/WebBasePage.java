@@ -3,7 +3,9 @@ package pageObjects;
 import net.serenitybdd.core.annotations.findby.FindBy;
 import net.serenitybdd.core.pages.PageObject;
 import org.awaitility.core.ConditionTimeoutException;
-import org.openqa.selenium.*;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import utils.Utils;
@@ -42,7 +44,7 @@ public class WebBasePage extends PageObject {
 
     public void waitUntilElementIsVisible(WebElement element) {
         try {
-            await().atMost(WAIT_TIMEOUT, SECONDS).until(() -> isVisible(element));
+           await().atMost(WAIT_TIMEOUT, SECONDS).until(() -> isVisible(element));
         } catch (ConditionTimeoutException e) {
             Reporte.reports("FAIL",String.format("No se encuentra el elemento: %s: ", element), Reporte.takeSnapShot(DriverFactory.getDriver())) ;
             throw new ConditionTimeoutException(String.format("No se encuentra el elemento \nElemento: %s: ", element));
